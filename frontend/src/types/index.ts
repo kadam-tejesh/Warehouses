@@ -31,9 +31,8 @@ export interface WarehouseRequest {
 }
 
 export interface WarehouseResponse extends WarehouseRequest {
-  id?: number; // not present in backend DTO yet, keeping optional for safety
+  id: number;
 }
-
 // ── Customer ──
 export interface CustomerRequest {
   name: string;

@@ -1,6 +1,6 @@
 import { motion, type HTMLMotionProps } from "framer-motion";
 import { Loader2 } from "lucide-react";
-
+import type { ReactNode } from "react";
 interface ButtonProps extends HTMLMotionProps<"button"> {
   isLoading?: boolean;
   variant?: "primary" | "ghost";
@@ -32,7 +32,7 @@ export default function Button({
       {...props}
     >
       {isLoading && <Loader2 className="h-4 w-4 animate-spin" />}
-      {children}
+      {children as ReactNode}
     </motion.button>
   );
 }
